@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Yameen - Web Designer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #0056b3;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>I'm Ahmed Yameen</h1>
+    <p>I create clean, modern, and responsive websites.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I'm a web designer with a passion for clean and user-friendly websites. I use HTML, CSS, and JavaScript to build responsive, modern layouts.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>School Website</h3>
+        <p>A modern site for schools with teacher salary management.</p>
+      </div>
+      <div class="project-card">
+        <h3>Business Portfolio</h3>
+        <p>A clean business layout to showcase services and pricing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea rows="4" id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top: 20px;"><strong>Phone:</strong> +92 302 2835313</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 | Ahmed Yameen - Web Designer Portfolio</p>
+  </footer>
+
+  <!-- JavaScript for form validation -->
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return false;
+      }
+
+      alert("Thank you! Your message has been sent.");
+      return true;
+    }
+  </script>
+</body>
+</html>
